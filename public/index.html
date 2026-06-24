@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BFHL Hierarchy Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">Chitkara 2026 · Round 1</p>
+      <h1>BFHL Hierarchy Analyzer</h1>
+      <p class="subtitle">
+        Enter parent→child node pairs and get structured tree insights, cycle
+        detection, and a full summary.
+      </p>
+    </header>
+
+    <form id="bfhl-form" class="panel">
+      <label for="nodes">Node relationships</label>
+      <p class="hint">One entry per line or comma-separated. Format: A→B (uppercase letters)</p>
+      <textarea id="nodes" rows="12" placeholder="A->B&#10;A->C&#10;B->D"></textarea>
+      <button type="submit" id="submit-btn">Analyze Hierarchy</button>
+    </form>
+
+    <div id="error-banner" class="error-banner hidden" role="alert"></div>
+    <section id="results" class="results hidden"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
